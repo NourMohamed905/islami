@@ -28,20 +28,39 @@ class _HomeScreenState extends State<HomeScreen> {
     TimeTab(),
   ];
 
+  List<String> backgroundImageName = [
+    'quran_background',
+    'hadeth_background',
+    'seb7a_background', 
+    'radio_background',
+    'time_background',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(),
-      body: tabs[currentIndex],
+      body: Container(
+        width: double.infinity,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/images/${backgroundImageName[currentIndex]}.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Column(
+          children: [
+            Image.asset('assets/images/header.png',  ),
+            tabs[currentIndex],
+          ],
+        ),
+      ),
     
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
         onTap: (index) {
           setState(() {
-            if (currentIndex == index){
-              return;
-            };
-            print('Current Index: $index');
+            if (currentIndex == index) return;
+            
             currentIndex = index;
           });
         },
