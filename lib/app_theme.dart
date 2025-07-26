@@ -14,7 +14,30 @@ class AppTheme{
       backgroundColor: primary,
       type: BottomNavigationBarType.fixed,
       showUnselectedLabels: false,
-      selectedItemColor: white
+      selectedItemColor: white,
+
+    ),
+    textTheme: TextTheme(
+      titleMedium: TextStyle(
+        color: white,
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+      ),
+       titleSmall: TextStyle(
+        color: white,
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+      ),
+       labelLarge: TextStyle(
+        color: white,
+        fontSize: 14,
+        fontWeight: FontWeight.bold,
+      ),
+       headlineMedium: TextStyle(
+        color: white,
+        fontSize: 24,
+        fontWeight: FontWeight.bold,
+      ),
     ),
    
   );

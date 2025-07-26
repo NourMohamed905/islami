@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami/nav_bar_selected.dart';
 import 'package:islami/nav_bar_unselected.dart';
 import 'package:islami/tabs/hadeth_tab.dart';
-import 'package:islami/tabs/quran_tab.dart';
+import 'package:islami/tabs/quran/quran_tab.dart';
 import 'package:islami/tabs/radio_tab.dart';
 import 'package:islami/tabs/seb7a_tab.dart';
 import 'package:islami/tabs/time_tab.dart';
@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           children: [
             Image.asset('assets/images/header.png',  ),
-            tabs[currentIndex],
+            Expanded(child: tabs[currentIndex]),
           ],
         ),
       ),
