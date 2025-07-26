@@ -10,7 +10,7 @@ class SurasList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    
+
     return Row(
       children: [
         Container(
@@ -26,6 +26,7 @@ class SurasList extends StatelessWidget {
           child: Text('${sura.num}', style: Theme.of(context).textTheme.titleSmall,),
         ),
         Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(sura.englishName, style: Theme.of(context).textTheme.titleSmall,),
             Text('${sura.ayatCount} Verses', style: Theme.of(context).textTheme.labelLarge,),
