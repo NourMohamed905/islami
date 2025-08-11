@@ -5,6 +5,8 @@ import 'package:islami/tabs/quran/sura_details_screen.dart';
 import 'package:islami/tabs/quran/suras_list.dart';
 
 class QuranTab extends StatelessWidget {
+  const QuranTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     double ScreenWidth = MediaQuery.of(context).size.width;

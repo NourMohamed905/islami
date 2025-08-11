@@ -2,15 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:islami/tabs/quran/sura.dart';
 
 class SurasList extends StatelessWidget {
-
-
   Sura sura;
-  SurasList({required this.sura});
+  SurasList({super.key, required this.sura});
 
   @override
   Widget build(BuildContext context) {
-
-
     return Row(
       children: [
         Container(
@@ -18,27 +14,32 @@ class SurasList extends StatelessWidget {
           height: 52,
           alignment: Alignment.center,
           margin: EdgeInsets.only(right: 24),
-          decoration: BoxDecoration(image: DecorationImage(
-            image: AssetImage('assets/images/sura_number_frame.png'),
-            fit: BoxFit.cover,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/sura_number_frame.png'),
+              fit: BoxFit.cover,
+            ),
           ),
+          child: Text(
+            '${sura.num}',
+            style: Theme.of(context).textTheme.titleSmall,
           ),
-          child: Text('${sura.num}', style: Theme.of(context).textTheme.titleSmall,),
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(sura.englishName, style: Theme.of(context).textTheme.titleSmall,),
-            Text('${sura.ayatCount} Verses', style: Theme.of(context).textTheme.labelLarge,),
+            Text(
+              sura.englishName,
+              style: Theme.of(context).textTheme.titleSmall,
+            ),
+            Text(
+              '${sura.ayatCount} Verses',
+              style: Theme.of(context).textTheme.labelLarge,
+            ),
           ],
         ),
         Spacer(),
-
-        Text(
-          sura.arabicName,style: Theme.of(context).textTheme.titleSmall
-        ),
-        
-        
+        Text(sura.arabicName, style: Theme.of(context).textTheme.titleSmall),
       ],
     );
   }

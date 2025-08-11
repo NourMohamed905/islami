@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class AppTheme {
@@ -47,7 +45,6 @@ class AppTheme {
         fontSize: 24,
         fontWeight: FontWeight.bold,
       ),
-
     ),
   );
 }

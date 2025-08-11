@@ -17,7 +17,7 @@ void main() async {
 
 class IslamiApp extends StatelessWidget {
   final bool showOnboarding;
-  IslamiApp({required this.showOnboarding});
+  const IslamiApp({super.key, required this.showOnboarding});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
