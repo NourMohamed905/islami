@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:islami/app_theme.dart';
 import 'package:islami/home_screen.dart';
 import 'package:islami/on_boarding_screens/on_boarding_screen.dart';
+import 'package:islami/tabs/quran/quran_service.dart';
 import 'package:islami/tabs/quran/sura_details_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final prefs = await SharedPreferences.getInstance();
   final bool showOnboarding = prefs.getBool('completed') ?? true;
+
+  await QuranService.getMostRecentlySuras();
 
   runApp(IslamiApp(
     showOnboarding: showOnboarding,

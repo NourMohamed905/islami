@@ -4,7 +4,7 @@ import 'package:islami/app_theme.dart';
 class LoadingIndicator extends StatelessWidget {
   Color? color;
 
-  LoadingIndicator({this.color});
+  LoadingIndicator({super.key, this.color});
 
   @override
   Widget build(BuildContext context) {

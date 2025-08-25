@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:islami/tabs/quran/sura.dart';
 
-class SurasList extends StatelessWidget {
+class SurasItem extends StatelessWidget {
   Sura sura;
-  SurasList({super.key, required this.sura});
+  SurasItem(this.sura, {super.key});
 
   @override
   Widget build(BuildContext context) {
