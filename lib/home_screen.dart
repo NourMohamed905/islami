@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami/nav_bar_selected.dart';
 import 'package:islami/nav_bar_unselected.dart';
-import 'package:islami/tabs/hadeth_tab.dart';
+import 'package:islami/tabs/hadeth/hadeth_tab.dart';
 import 'package:islami/tabs/quran/quran_tab.dart';
 import 'package:islami/tabs/radio_tab.dart';
 import 'package:islami/tabs/seb7a_tab.dart';
@@ -39,6 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        padding: EdgeInsets.only(top: 40),
         width: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(

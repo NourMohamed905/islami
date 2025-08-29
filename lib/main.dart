@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:islami/app_theme.dart';
 import 'package:islami/home_screen.dart';
 import 'package:islami/on_boarding_screens/on_boarding_screen.dart';
+import 'package:islami/tabs/hadeth/hadeth.dart';
+import 'package:islami/tabs/hadeth/hadeth_details.dart';
 import 'package:islami/tabs/quran/quran_service.dart';
 import 'package:islami/tabs/quran/sura_details_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -29,6 +31,7 @@ class IslamiApp extends StatelessWidget {
         HomeScreen.routeName: (_) => HomeScreen(),
         SuraDetailsScreen.routeName: (_) => SuraDetailsScreen(),
         on_boarding_screen.routeName: (_) => on_boarding_screen(),
+        HadethDetailsScreen.routeName: (_) => HadethDetailsScreen(),
       },
       theme: AppTheme.darkTheme,
       initialRoute:
