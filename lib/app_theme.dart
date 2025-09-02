@@ -67,6 +67,11 @@ class AppTheme {
         fontSize: 24,
         fontWeight: FontWeight.bold,
       ),
+      headlineLarge: TextStyle(
+        color: white,
+        fontSize: 36,
+        fontWeight: FontWeight.bold,
+      ),
     ),
   );
 }
