@@ -8,6 +8,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 class on_boarding_screen extends StatefulWidget {
   static const String routeName = '/welcome';
 
+  const on_boarding_screen({super.key});
+
   @override
   State<on_boarding_screen> createState() => _on_boarding_screenState();
 }
